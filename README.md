@@ -1,4 +1,3 @@
-# SQL-PIZZA-SALES-PROJECT-SSMS
 # SQL Pizza Sales Project (SSMS)
 
 This project demonstrates SQL-based analysis of pizza sales data using **SQL Server Management Studio (SSMS)**. It provides insights into order trends, revenue, product popularity, and customer behavior from a relational database schema.
