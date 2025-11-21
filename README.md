@@ -1,66 +1,100 @@
-# SQL Pizza Sales Project (SSMS)
+🍕 SQL Pizza Sales Analysis — SSMS Project
 
-This project demonstrates SQL-based analysis of pizza sales data using **SQL Server Management Studio (SSMS)**. It provides insights into order trends, revenue, product popularity, and customer behavior from a relational database schema.
 
----
+ **Project Overview**
 
-## Project Description
-The SQL Pizza Sales Project uses sales data stored in an SQL Server database to answer critical business questions that can drive strategy in a pizza business. By analyzing order patterns, revenue, and product popularity from a database created in SSMS, this project enables data-driven decision making for menu planning, promotions, and operations.
+This project showcases end-to-end SQL analysis performed in SQL Server Management Studio (SSMS) to explore pizza sales performance, customer behavior, and revenue patterns.
+It demonstrates practical SQL skills used in real business environments—data extraction, transformation, aggregation, and insight generation directly from a relational database.
 
----
+ **Project Objectives**
 
-## Business Questions
-Here are some of the business problems this project tackles:
+Understand total revenue and order trends across time.
 
-- What is the total revenue over different time periods (daily, monthly, quarterly)?  
-- Which pizza types or categories generate the most sales?  
-- What are the top-selling pizzas?  
-- How do order volumes vary by time of day or day of week?  
-- What is the average order value per transaction?  
-- Which pizza sizes are most preferred by customers?
+Identify best-selling pizzas and high-performing categories.
 
----
+Analyze customer ordering patterns (time of day, weekdays vs weekends).
 
-## Database Schema
-The SQL database schema consists of the following tables:
+Study revenue contribution by pizza size, type, and category.
 
-- **orders** — Contains order information (`order_id`, `order_date`, `total_amount`, `customer_id`)  
-- **order_details** — Line items for each order (`pizza_id`, `quantity`, `unit_price`)  
-- **pizzas** — Pizza master data (`pizza_id`, `name`, `type_id`, `size_id`)  
-- **pizza_types** — Categories of pizza (e.g., `Classic`, `Specialty`)  
-- **sizes** — Available pizza sizes (e.g., `Small`, `Medium`, `Large`)
+Derive data-driven recommendations to optimize pricing, promotions, and menu planning.
 
----
+ **Database Structure**
 
-## SQL Analysis
-Analysis queries included in the project:
+The analysis is based on a well-structured relational database with the following tables:
 
-- **Aggregated Metrics**: Total sales, total orders, average order value  
-- **Sales Trend**: Orders and revenue by hour, weekday, month  
-- **Product Analysis**: Which pizzas sell the most (by count and value)  
-- **Category & Size Analysis**: Revenue by pizza category and size  
-- **Time-Based Patterns**: Peak sales hours and days
+Table Name	Description
+orders	Main order info: date, customer, total value
+order_details	Line items for each order: pizza, quantity, unit price
+pizzas	Pizza details: name, category, size
+pizza_types	High-level pizza categories (Classic, Specialty, Veggie, etc.)
+sizes	Available pizza sizes (S, M, L, XL)
 
-Each query is written in `.sql` files (available in the repository) and can be executed in SSMS against pizza sales schema.
+This schema supports granular analysis of sales performance and customer preferences.
 
----
+ **Key Business Questions Answered**
 
-## Key Insights
-Based on SQL analysis, some of the major observations:
+What is the total revenue over daily, weekly, and monthly timelines?
 
-- Peak order times are around **lunch and dinner hours**, which aligns with customer eating habits.  
-- Medium-sized pizzas have high order volume, while large pizzas generate higher revenue per order.  
-- The **Specialty** pizza category contributes significantly to overall revenue.  
-- Customer orders spike on **weekends**, suggesting an opportunity for targeted marketing.  
-- Average order values increase when customers choose larger or premium pizzas.
+Which pizzas and categories perform the best?
 
----
+What is the average order value?
 
-## Tools & Technologies
-- **SQL Server Management Studio (SSMS)**: To write and run SQL queries  
-- **Microsoft SQL Server**: The underlying database to store and manage sales data  
-- **Markdown**: For documenting the project in README  
+At what hours and days do customers order the most?
 
----
-   git clone https://github.com/Sayan-Chandra95/SQL-PIZZA-SALES-PROJECT-SSMS-.git
+Which pizza sizes generate the most revenue and volume?
 
+What seasonal or behavioral patterns exist in the sales data?
+
+ **SQL Techniques Used**
+
+This project demonstrates strong SQL fundamentals such as:
+
+Joins (INNER, LEFT)
+
+Aggregation (SUM, COUNT, AVG, MAX)
+
+Window Functions (ROW_NUMBER, RANK, OVER)
+
+Grouping & Filtering (GROUP BY, HAVING)
+
+Date Functions (DATENAME, DATEPART, MONTH, YEAR)
+
+CTEs (Common Table Expressions)
+
+Subqueries for deeper insights
+
+All queries are available in the repository as .sql files.
+
+ **Key Insights from Analysis**
+
+(Replace with your actual results if needed)
+
+Lunch and dinner hours show the highest order spikes.
+
+Medium pizza size is most frequently ordered, while large pizzas drive higher revenue.
+
+Specialty pizzas account for a major share of total earnings.
+
+Sales increase significantly on Fridays, Saturdays, and Sundays, indicating weekend demand.
+
+A small number of top pizzas contribute a large portion of total revenue (Pareto trend).
+
+ **Business Impact**
+ 
+This analysis helps a pizza business:
+
+Identify high-performing menu items
+
+Optimize inventory planning
+
+Design targeted promotions for peak hours
+
+Plan weekend staffing and delivery resources
+
+Improve pricing strategy by size and category
+
+ **Tools & Technologies**
+
+SQL Server Management Studio (SSMS)
+
+Microsoft SQL Server for database creation and querying
